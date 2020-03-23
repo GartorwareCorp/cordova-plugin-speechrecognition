@@ -203,6 +203,7 @@ public class SpeechRecognition extends CordovaPlugin {
     }
 
     Intent detailsIntent = new Intent(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS);
+    detailsIntent.setPackage("com.google.android.googlequicksearchbox");
     activity.sendOrderedBroadcast(detailsIntent, null, languageDetailsChecker, null, Activity.RESULT_OK, null, null);
   }
 
